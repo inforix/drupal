@@ -19,7 +19,7 @@ php composer-setup.php --install-dir=/bin --filename=composer
 php -r "unlink('composer-setup.php');"
 ```
 
-# 3. 安装 Apache HTTPD 服务
+# 3. 安装 Apache HTTPD 服务
 ```bash
 yum -y install httpd mod_ssl
 systemctl enable httpd
