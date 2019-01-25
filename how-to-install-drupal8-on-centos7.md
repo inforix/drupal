@@ -1,7 +1,7 @@
 
 # 1. 安装 PHP 7.2
 
-首先从webtatic网站安装预编译好的PHP 7.2。
+1. 首先从webtatic网站安装预编译好的PHP 7.2。
 ```bash
 yum -y install epel-release
 rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
