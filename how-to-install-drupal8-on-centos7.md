@@ -1,7 +1,7 @@
 
 # 1. 安装 PHP 7.2
 
-1. 首先从webtatic网站安装预编译好的PHP 7.2。
+首先从webtatic网站安装预编译好的PHP 7.2。
 ```bash
 yum -y install epel-release
 rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
@@ -65,7 +65,9 @@ chown -R apache:apache *
 # 7. 修改httpd.conf配置文件
 
 修改默认web路径为 /var/www/html/web/
+
 修改允许覆盖
+
 ```ini
 AllowOverride = All
 ```

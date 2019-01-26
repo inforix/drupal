@@ -1,6 +1,6 @@
 本案例的有关设定：
 
-**OS**：CentOS 7.1 x64
+**OS**：CentOS 7.x x64
 
 **Drupal Root**：/var/www/html/
 
@@ -11,22 +11,14 @@
 **Drupal Version**：8.x Latest Version
 
 # 1. CentOS 7.1操作系统安装
-建议最小化安装64位CentOS 7.1 操作系统，同时选择_Development Tools_工具包。
+建议最小化安装64位CentOS 7.1 操作系统，同时选择 _Development Tools_ 工具包。
 安装完成后，运行
 ```bash
-yum -y install wget open-vm-tools
+yum -y install wget
 yum -y update
 ```
 
-# 2. 配置防火墙
-考虑到系统的安全性，防火墙不能关闭，必须按照要求配置。
-配置命令如下：
-```bash
-firewall-cmd --permanent --add-port=http/tcp
-firewall-cmd --reload
-```
-
-# 3. 配置SELINUX
+# 2. 配置SELINUX
 修改SELINUX为permissive模式。
 
 ```bash
