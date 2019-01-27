@@ -1,4 +1,4 @@
-# 安装 Drupal 8.x
+# Drupal 8 使用指南
 
 * [安装操作系统](prepare-centos-7.x.md)
 * [安装 Drupal 8.x 代码](how-to-install-drupal8-on-centos7.md)
