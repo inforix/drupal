@@ -11,7 +11,12 @@ vendor/drush/drush/drush -y en migrate_plus migrate_tools
 
 **模块名称**: migrate_json
 
-File: migrate_json.info.yml
+```bash
+mkdir -p /var/www/html/web/modules/migrate-json
+mkdir -p /var/www/html/web/modules/migrate-json/config/install
+```
+
+File: /var/www/html/web/modules/migrate_json.info.yml
 
 ```yml
 type: module
@@ -27,12 +32,7 @@ version: '8.x-1.0'
 core: '8.x'
 ```
 
-```bash
-mkdir -p /var/www/html/modules/migrate-json
-mkdir -p /var/www/html/modules/migrate-json/config/install
-```
-
-File: /var/www/html/modules/migrate-json/config/install/migrate_plus.migration.articles.yml
+File: /var/www/html/web/modules/migrate-json/config/install/migrate_plus.migration.articles.yml
 
 ```yml
 id: jsonarticles
