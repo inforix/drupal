@@ -1,6 +1,6 @@
 本案例的有关设定：
 
-**OS**：CentOS 7.x x64
+**OS**：CentOS 7.x x64 或 Ubuntu 18.04
 
 **Drupal Root**：/var/www/html/
 
@@ -10,8 +10,8 @@
 
 **Drupal Version**：8.x Latest Version
 
-# 1. CentOS 7.1操作系统安装
-建议最小化安装64位CentOS 7.1 操作系统，同时选择 _Development Tools_ 工具包。
+# 1. CentOS 7操作系统安装
+建议最小化安装64位CentOS 7 操作系统，同时选择 _Development Tools_ 工具包。
 安装完成后，运行
 ```bash
 yum -y install wget
@@ -32,7 +32,7 @@ setenforce 0
 ```
 
 # 2. Ubuntu 18.04操作系统安装
-安装64位Ubuntu 18.04操作系统，安装完成后，执行软件升级，运行以下命令:
+安装64位Ubuntu 18.04 操作系统，安装完成后，执行软件升级，运行以下命令:
 ```bash
 sudo apt update && sudo apt upgrade
 ```
