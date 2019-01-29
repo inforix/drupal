@@ -23,17 +23,17 @@ php -r "unlink('composer-setup.php');"
 # 3. 安装配置防火墙
 
 ```bash
-apt install firewalld
-firewall-cmd --permanent --add-service=http
-firewall-cmd --permanent --add-service=https
-firewall-cmd --reload
+sudo apt install firewalld
+sudo firewall-cmd --permanent --add-service=http
+sudo firewall-cmd --permanent --add-service=https
+sudo firewall-cmd --reload
 ```
 
 # 4. 安装并配置 Mariadb 
 ```bash
-apt-get install mariadb-server mariadb-client
-systemctl enable mariadb
-systemctl start mariadb
+sudo apt-get install mariadb-server mariadb-client
+sudo systemctl enable mariadb
+sudo systemctl start mariadb
 ```
 
 安装完成后，运行 mysql_secure_installation 进行安全处理。
@@ -42,16 +42,16 @@ systemctl start mariadb
 # 5. 创建站点数据库
 
 ```bash
-mysqladmin -p create drupal
-mysql -u root -p
-grant all privileges on drupal.* to drupal@localhost identified by 'PASSWORD';
-flush privileges;
-exit;
+sudo mysqladmin -p create drupal
+sudo mysql -u root -p
+mysql> grant all privileges on drupal.* to drupal@localhost identified by 'PASSWORD';
+mysql> flush privileges;
+mysql> exit;
 ```
 
 # 6. 安装 Drupal 8
 ```bash
-composer create-project drupal-composer/drupal-project:8.x-dev /var/www/html/ --stability dev --no-interaction
+sudo composer create-project drupal-composer/drupal-project:8.x-dev /var/www/html/ --stability dev --no-interaction
 mkdir -p /var/www/html/config/sync/
 chown -R www-data:www-data /var/www/html/*
 ```
