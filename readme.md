@@ -9,4 +9,4 @@
 * [从JSON导入内容](how-to-migrate-json-content.md)
 * [管理用户、角色和权限](admin-people.md)
 
-Test
+* [安装 Drupal8.x - Ubuntu 18.04](how-to-install-drupal9-on-Ubuntu.md)
