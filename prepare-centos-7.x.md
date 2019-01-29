@@ -18,7 +18,7 @@ yum -y install wget
 yum -y update
 ```
 
-# 2. 配置SELINUX
+配置SELINUX
 修改SELINUX为permissive模式。
 
 ```bash
@@ -29,4 +29,10 @@ sed -i 's/SELINUX=enforcing/SELINUX=permissive/g'  /etc/selinux/config
 
 ```bash
 setenforce 0
+```
+
+# 2. Ubuntu 18.04操作系统安装
+安装64位Ubuntu 18.04操作系统，安装完成后，执行软件升级，运行以下命令:
+```bash
+sudo apt update && sudo apt upgrade
 ```
