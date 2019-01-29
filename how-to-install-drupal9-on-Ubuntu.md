@@ -6,7 +6,7 @@ sudo apt install php7.2 libapache2-mod-php7.2 php7.2-common php7.2-mbstring php7
 ```
 配置时区
 ```bash
-sed -i 's/;date.timezone =/date.timezone = Asia\/Shanghai/g' /etc/php/7.2/apache2/php.ini
+sudo sed -i 's/;date.timezone =/date.timezone = Asia\/Shanghai/g' /etc/php/7.2/apache2/php.ini
 ```
 
 # 2. 安装 Composer
@@ -14,10 +14,10 @@ sed -i 's/;date.timezone =/date.timezone = Asia\/Shanghai/g' /etc/php/7.2/apache
 `建议直接访问 https://getcomposer.org/download 获取以下代码的最新版。`
 
 ```bash
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-php composer-setup.php --install-dir=/bin --filename=composer
-php -r "unlink('composer-setup.php');"
+sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+sudo php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+sudo php composer-setup.php --install-dir=/bin --filename=composer
+sudo php -r "unlink('composer-setup.php');"
 ```
 
 # 3. 安装配置防火墙
@@ -52,8 +52,8 @@ mysql> exit;
 # 6. 安装 Drupal 8
 ```bash
 sudo composer create-project drupal-composer/drupal-project:8.x-dev /var/www/html/ --stability dev --no-interaction
-mkdir -p /var/www/html/config/sync/
-chown -R www-data:www-data /var/www/html/*
+sudo mkdir -p /var/www/html/config/sync/
+sudo chown -R www-data:www-data /var/www/html/*
 ```
 
 # 7. 修改000-default.conf配置文件
@@ -68,7 +68,7 @@ AllowOverride = All
 
 重启Apache服务
 ```bash
-systemctl restart apache2.service
+sudo systemctl restart apache2.service
 ```
 
 # 8. 访问站点进行安装。
